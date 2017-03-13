@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% for profile in profiles %}
+    <ul>
+        <li>UserID: <a href='{{url_for(".detail_user_profile", userid=profile.userid)}}'>{{profile.userid}}</a></li>
+        <li>Username: {{profile.username}}</li>
+        <li>Firstname: {{profile.firstname}}</li>
+        <li>Lastname: {{profile.lastname}}</li>
+        <li>Age: {{ profile.age}}</li>
+        <li>Image: {{ profile.image}}</li>
+        <li>Profile_created_on: {{profile.created}}</li>
+    </ul>
+{% endfor %}
+</body>
+</html>
